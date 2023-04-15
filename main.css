@@ -1,0 +1,17 @@
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.row{
+    display: flex;
+}
+
+.cell {
+    border: 2px solid blue;
+    width: 100px;
+    height: 100px;
+}
+
+.cell:hover{
+    background-color: black;
+}
