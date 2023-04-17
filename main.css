@@ -1,8 +1,21 @@
-.grid-container{
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+button{
+    width: 10%;
+}
+
+.grid-container{ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-}
+    align-content: center;
+    margin-bottom: 1%;
+ } 
 .row{
     display: flex;
 }
@@ -12,9 +25,3 @@
     width: 100px;
     height: 100px;
 }
-
-/*
-.cell:hover{
-    background-color: black;
-}
-*/
