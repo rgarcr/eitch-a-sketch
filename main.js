@@ -6,10 +6,12 @@ document.querySelector('button').addEventListener('click', (e)=>{
     let size;
     do{
         size = Number(prompt('Please enter grid size not greater than 100'));
-    }while(size > 100 && typeof(size) === 'number');
+    }while(isNaN(size) || size > 100);
     makeGrid(size);
 
 });
+
+
 /*
 Nested loops to create the rows and cells of the grid
 */
@@ -21,8 +23,17 @@ function makeGrid(size) {
             const divCell = document.createElement('div');
             divCell.classList.add('cell')
             divRow.appendChild(divCell)
-            
+            divCell.addEventListener('mouseover', colorCell)
+            divCell.addEventListener('click', restoreCell)
         }
         container.appendChild(divRow)
     }
+}
+
+function colorCell(e){
+    this.style.backgroundColor = 'black';
+}
+
+function restoreCell(e){
+    this.style.backgroundColor='white';
 }
